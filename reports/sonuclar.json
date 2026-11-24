@@ -1,0 +1,57 @@
+{
+  "secilen_model": "Lojistik Regresyon",
+  "test_ham": {
+    "roc_auc": 0.8322,
+    "pr_auc": 0.6223,
+    "brier": 0.1415,
+    "log_loss": 0.431
+  },
+  "test_kalibre": {
+    "roc_auc": 0.8322,
+    "pr_auc": 0.6223,
+    "brier": 0.142,
+    "log_loss": 0.4338
+  },
+  "test_musteri": 1409,
+  "test_churn": 374,
+  "varsayimlar": {
+    "iletisim_maliyeti": 5.0,
+    "ikna_orani": 0.3,
+    "tesvik": "1 aylık ücret",
+    "korunan_gelir": "12 aylık ücret"
+  },
+  "hedef_orani_dogrulamadan": 0.404,
+  "stratejiler": {
+    "Kimseye kampanya yapma": 0,
+    "Herkese kampanya": 23106,
+    "Rastgele 569 müşteri": 9468,
+    "Model: en riskli %40 (569 müşteri)": 53400,
+    "Model: beklenen kârı pozitif olanlar (579 müşteri)": 52788
+  },
+  "ikna_orani_duyarlilik": [
+    {
+      "ikna_orani": 0.1,
+      "hedeflenen": 309,
+      "model_kari": 6386,
+      "herkese_kari": -38855
+    },
+    {
+      "ikna_orani": 0.2,
+      "hedeflenen": 494,
+      "model_kari": 26060,
+      "herkese_kari": -7874
+    },
+    {
+      "ikna_orani": 0.3,
+      "hedeflenen": 579,
+      "model_kari": 52788,
+      "herkese_kari": 23106
+    },
+    {
+      "ikna_orani": 0.5,
+      "hedeflenen": 696,
+      "model_kari": 105586,
+      "herkese_kari": 85068
+    }
+  ]
+}

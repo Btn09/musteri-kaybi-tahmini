@@ -1,0 +1,8 @@
+{
+  "model": "Lojistik Regresyon",
+  "kalibrasyon": "sigmoid",
+  "iletisim_maliyeti": 5.0,
+  "ikna_orani": 0.3,
+  "tesvik": "1 aylık ücret",
+  "korunan_gelir": "12 aylık ücret"
+}
