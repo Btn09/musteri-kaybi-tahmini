@@ -4,15 +4,11 @@
 Çalıştırma:  python -m src.acikla
 """
 import joblib
-import matplotlib
 import numpy as np
 import shap
 from sklearn.linear_model import LogisticRegression
 
 from .veri import KATEGORIK, KOK, SAYISAL, bol, ozellik_ekle, veri_oku
-
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
 
 TURKCE = {
     "gender": "Cinsiyet", "SeniorCitizen": "65 yaş üstü", "Partner": "Eşi var", "Dependents": "Bakmakla yükümlü",
@@ -70,6 +66,11 @@ class Aciklayici:
 
 
 def main():
+    # matplotlib sadece grafik üretirken gerekiyor; API imajında kurulu değil
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
     model = joblib.load(KOK / "models" / "model.joblib")
     egitim, _, test = bol(veri_oku())
     X_e, X_t = ozellik_ekle(egitim), ozellik_ekle(test)
